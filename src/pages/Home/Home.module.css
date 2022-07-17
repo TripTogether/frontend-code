@@ -1,0 +1,130 @@
+.layout {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: overlay;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    margin-bottom: 100px;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 10px;
+    flex: 0 1 728px;
+
+    position: fixed;
+    height: 96px;
+    /* True White */
+
+    background: #ffff;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main {
+    /* display: flex; */
+    flex-direction: column;
+    padding-top: 96px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+
+.main h1 {
+    position: relative;
+    height: 69px;
+
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+
+    color: #F5F5F5;
+    text-align: right;
+    margin-right: 5%;
+}
+
+
+.main h2 {
+    position: relative;
+    height: 69px;
+
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+
+    color: #F5F5F5;
+    text-align: right;
+    margin-right: 5%;
+
+    height: 100px;
+
+
+}
+
+.main h3 {
+    position: relative;
+    height: 100px;
+    top: 0;
+
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #F5F5F5;
+    text-align: right;
+    margin-right: 5%;
+
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+
+    height: 95px;
+
+    width: 100%;
+    top: 40px;
+}
+
+.menu .plan {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 18.33%;
+    right: 53.19%;
+    top: 600px;
+    bottom: 65.78%;
+
+    background-color: rgba(86, 86, 86, 0.7);
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.menu div:nth-of-type(1) {
+    margin-right: 10%;
+}
