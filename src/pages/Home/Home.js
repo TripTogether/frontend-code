@@ -20,14 +20,30 @@ function Home() {
                 </h3>
             </div>
             <div className={style.menu}>
-                <div className={style.plan}>
-                    여행일정
-                </div>
-                <div className={style.plan}>
-                    마이페이지
-                </div>
-            </div>
-        </div>
+                <Link to='/plan'>
+                    <div className={style.plan}>
+                        <h1>
+                            여행일정
+                        </h1><br />
+                        <h2>
+                            여행의 세부 계획을 세워보세요!
+                        </h2>
+                    </div>
+                </Link>
+                <Link to='/myPage'>
+                    <div className={style.myPage}>
+                        <h1>
+                            마이페이지
+                            <br />
+                        </h1>
+
+                        <h2>
+                            다녀온 여행의 후기를 기록해요
+                        </h2>
+                    </div>
+                </Link >
+            </div >
+        </div >
     );
 }
 

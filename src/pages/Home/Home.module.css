@@ -36,10 +36,12 @@
 .main {
     /* display: flex; */
     flex-direction: column;
-    padding-top: 96px;
+    padding-top: 156px;
     width: 100%;
     justify-content: space-between;
-    background-color: aquamarine;
+    height: 700px;
+    background: url(../../../public/img/coud.jpg);
+
 }
 
 
@@ -99,32 +101,87 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     align-items: center;
+    justify-content: center;
 
-    height: 95px;
 
-    width: 100%;
-    top: 40px;
+    width: 90%;
+
 }
 
 .menu .plan {
+
     display: flex;
-    align-items: center;
     position: relative;
-    left: 18.33%;
-    right: 53.19%;
-    top: 600px;
+    top: 700px;
     bottom: 65.78%;
 
-    background-color: rgba(86, 86, 86, 0.7);
 
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
+
+    margin-right: 20px;
+    background: url(../../../public/img/mypage.jpg);
+    background-color: rgba(86, 86, 86, 0.7);
+    text-decoration: none;
+
+    flex-direction: column;
 
 }
 
-.menu div:nth-of-type(1) {
-    margin-right: 10%;
+.menu .myPage {
+    display: flex;
+    position: relative;
+    left: 40.33%;
+    right: 3.19%;
+    top: 700px;
+    bottom: 65.78%;
+
+
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+
+    background: url(../../../public/img/plan.png);
+    flex-direction: column;
+}
+
+.menu a {
+    text-decoration: none;
+    position: relative;
+
+}
+
+.menu h1 {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: 180px;
+    left: -50px;
+
+
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 50px;
+
+    color: #F5F5F5;
+}
+
+.menu h2 {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: 120px;
+    left: 10px;
+
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 50px;
+
+    color: #F5F5F5;
 }
