@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 .layout {
     display: flex;
     position: fixed;
@@ -9,7 +13,6 @@
     flex-direction: column;
     width: 100%;
     overflow-y: scroll;
-    margin-bottom: 100px;
 
 }
 
@@ -40,8 +43,7 @@
     width: 100%;
     justify-content: space-between;
     height: 700px;
-    background: url(../../../public/img/coud.jpg);
-
+    background: url(../../../public/img/coud.jpg) center/cover;
 }
 
 
@@ -58,6 +60,7 @@
     color: #F5F5F5;
     text-align: right;
     margin-right: 5%;
+
 }
 
 
@@ -98,50 +101,41 @@
 }
 
 .menu {
-    position: absolute;
+    position: relative;
     display: flex;
-    flex-direction: row;
-
-
-    width: 90%;
-
+    width: 100%;
+    background-color: aqua;
+    justify-content: space-evenly
 }
 
 .menu .plan {
 
     display: flex;
     position: relative;
-    top: 700px;
-    bottom: 65.78%;
 
 
     width: 400px;
     height: 400px;
     border-radius: 50%;
 
-    margin-right: 20px;
-    background: url(../../../public/img/mypage.jpg);
+    background: url(../../../public/img/mypage.jpg) center/cover;
     background-color: rgba(86, 86, 86, 0.7);
     text-decoration: none;
 
     flex-direction: column;
+
 
 }
 
 .menu .myPage {
     display: flex;
     position: relative;
-    left: 40.33%;
-    right: 3.19%;
-    top: 700px;
-    bottom: 65.78%;
-
 
     width: 400px;
     height: 400px;
     border-radius: 50%;
 
-    background: url(../../../public/img/plan.png);
+    background: url(../../../public/img/plan.png) center/cover;
     flex-direction: column;
 }
 
