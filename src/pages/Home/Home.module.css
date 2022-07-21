@@ -101,8 +101,6 @@
     position: absolute;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
 
 
     width: 90%;
@@ -154,7 +152,6 @@
 }
 
 .menu h1 {
-    justify-content: center;
     display: flex;
     position: relative;
     top: 180px;
@@ -171,7 +168,6 @@
 }
 
 .menu h2 {
-    justify-content: center;
     display: flex;
     position: relative;
     top: 120px;
