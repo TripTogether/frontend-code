@@ -104,18 +104,18 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     justify-content: space-evenly
 }
 
 .menu .plan {
-
+    margin: 100px 0px;
     display: flex;
     position: relative;
 
-
-    width: 400px;
-    height: 400px;
+    margin-left: 30px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 
     background: url(../../../public/img/mypage.jpg) center/cover;
@@ -128,11 +128,14 @@ body {
 }
 
 .menu .myPage {
+    margin: 100px 0px;
+
     display: flex;
     position: relative;
+    margin-right: 30px;
 
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 
     background: url(../../../public/img/plan.png) center/cover;
