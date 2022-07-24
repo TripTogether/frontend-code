@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React, { Component } from 'react';
 import Header from '../../components/Home/Header';
 import style from './Home.module.css';
+import { TripData } from '../../components/Home/TripData';
 
 function Home() {
     return (
@@ -43,6 +44,9 @@ function Home() {
                     </div>
                 </Link >
             </div >
+            <div>
+                <TripData></TripData>
+            </div>
         </div >
     );
 }
