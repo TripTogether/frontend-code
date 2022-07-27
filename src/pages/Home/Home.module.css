@@ -105,25 +105,38 @@ body {
     display: flex;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
 
-.menu .plan {
+.menu::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.menu .box1 {
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+    border: 1px solid rgb(249, 3, 3);
+    padding-bottom: 56.25%;
+}
+
+.plan {
+    float: left;
     margin: 100px 0px;
     display: flex;
-    position: relative;
+    position: absolute;
 
     margin-left: 30px;
-    width: 300px;
-    height: 300px;
+    width: 410px;
+    height: 410px;
     border-radius: 50%;
 
     background: url(../../../public/img/mypage.jpg) center/cover;
-    background-color: rgba(86, 86, 86, 0.7);
     text-decoration: none;
 
     flex-direction: column;
-
 
 }
 
@@ -131,11 +144,11 @@ body {
     margin: 100px 0px;
 
     display: flex;
-    position: relative;
+    position: absolute;
     margin-right: 30px;
 
-    width: 300px;
-    height: 300px;
+    width: 410px;
+    height: 410px;
     border-radius: 50%;
 
     background: url(../../../public/img/plan.png) center/cover;
@@ -152,7 +165,7 @@ body {
     display: flex;
     position: relative;
     top: 180px;
-    left: -50px;
+    left: 87px;
 
 
     font-family: 'Gothic A1';
@@ -168,7 +181,7 @@ body {
     display: flex;
     position: relative;
     top: 120px;
-    left: 10px;
+    left: 87px;
 
     font-family: 'Gothic A1';
     font-style: normal;

@@ -1,0 +1,21 @@
+.container {
+    width: calc(50% - 24px);
+    border: 1px solid black;
+}
+
+.box1 {
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+    border: 1px solid rgb(249, 3, 3);
+    padding-bottom: 56.25%;
+}
+
+.box2 {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border: 1px solid rgb(19, 53, 139);
+}
