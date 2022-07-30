@@ -1,14 +1,18 @@
 import style from './Plan.module.css';
+import Header from '../../components/Home/Header';
 
 function Plan() {
     return (
-        <div className={style.container}>
-            <div className={style.box1}>
-                <div className={style.box2}>
-
-                </div>
+        // <div className={style.layout}>
+        <div>
+            <Header className={style.header}></Header>
+            <div className={style.title}>
+                <h1>
+                    여행 일정 작성하기
+                </h1>
+                <button>등록</button>
             </div>
-        </div>
+        </div >
     );
 }
 

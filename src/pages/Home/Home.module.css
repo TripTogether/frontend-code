@@ -100,29 +100,38 @@ body {
 
 }
 
+/* 
 .menu {
     position: relative;
     display: flex;
     width: 100%;
     background-color: rgb(255, 255, 255);
     justify-content: space-evenly;
+    border: 1px solid rgb(0, 0, 0);
+
+
+    padding-bottom: 56.25%;
+    flex-direction: column;
 }
 
 .menu::after {
     content: "";
     clear: both;
     display: block;
+
 }
 
-.menu .box1 {
-    padding-top: 56.25%;
+.menu .box {
     position: relative;
     width: 100%;
     border: 1px solid rgb(249, 3, 3);
     padding-bottom: 56.25%;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.plan {
+.menu .box .plan {
     float: left;
     margin: 100px 0px;
     display: flex;
@@ -136,11 +145,9 @@ body {
     background: url(../../../public/img/mypage.jpg) center/cover;
     text-decoration: none;
 
-    flex-direction: column;
-
 }
 
-.menu .myPage {
+.menu .box .myPage {
     margin: 100px 0px;
 
     display: flex;
@@ -152,7 +159,47 @@ body {
     border-radius: 50%;
 
     background: url(../../../public/img/plan.png) center/cover;
-    flex-direction: column;
+} */
+
+.menu {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.menu .plan {
+    margin: 100px 0px;
+    display: flex;
+    position: relative;
+
+    margin-left: 30px;
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+
+    background: url(../../../public/img/mypage.jpg) center/cover;
+    background-color: rgba(86, 86, 86, 0.7);
+    text-decoration: none;
+
+
+
+}
+
+.menu .myPage {
+    margin: 100px 0px;
+
+    display: flex;
+    position: relative;
+    margin-right: 30px;
+
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+
+    background: url(../../../public/img/plan.png) center/cover;
 }
 
 .menu a {
@@ -166,7 +213,8 @@ body {
     position: relative;
     top: 180px;
     left: 87px;
-
+    width: 100%;
+    height: 20px;
 
     font-family: 'Gothic A1';
     font-style: normal;
@@ -175,14 +223,16 @@ body {
     line-height: 50px;
 
     color: #F5F5F5;
+
 }
 
 .menu h2 {
     display: flex;
     position: relative;
-    top: 120px;
-    left: 87px;
-
+    top: 230px;
+    width: 100%;
+    height: 20px;
+    left: -118px;
     font-family: 'Gothic A1';
     font-style: normal;
     font-weight: 700;
