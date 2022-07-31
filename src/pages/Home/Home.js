@@ -25,7 +25,7 @@ function Home() {
                     <div className={style.plan}>
                         <h1>
                             여행일정
-                        </h1><br />
+                        </h1>
                         <h2>
                             여행의 세부 계획을 세워보세요!
                         </h2>
@@ -35,7 +35,6 @@ function Home() {
                     <div className={style.myPage}>
                         <h1>
                             마이페이지
-                            <br />
                         </h1>
 
                         <h2>
