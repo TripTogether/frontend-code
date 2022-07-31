@@ -1,0 +1,47 @@
+.layout {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: overlay;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 10px;
+    flex: 0 1 728px;
+
+    position: fixed;
+    height: 96px;
+    /* True White */
+
+    background: #ffff;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 1000;
+}
+
+.middleheader {
+    position: absolute;
+    width: 1439px;
+    height: 80px;
+    left: 1px;
+    top: 98px;
+    /* True White */
+
+    background: #ffff;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
