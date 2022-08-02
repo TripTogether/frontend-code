@@ -120,7 +120,7 @@
     position: relative;
     top: 42px;
 
-    background: #b64343;
+    background: #a4f57c;
     flex-direction: column;
 }
 
@@ -136,4 +136,41 @@
     width: 92.3%;
     border: 0.902463px solid #D9D9D9;
     margin-right: 7.7%;
+}
+
+.ment {
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 92.3%;
+    height: 59px;
+
+    border: 1px solid #D9D9D9;
+    align-items: center;
+}
+
+.ment h1 {
+    position: absolute;
+    width: 180px;
+    height: 30px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21.6591px;
+    line-height: 30px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #000000;
+
+}
+
+.routeIcon {
+    width: 18px;
+    height: 18px;
+    color: #2BB6F1;
 }

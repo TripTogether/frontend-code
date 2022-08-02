@@ -1,0 +1,7 @@
+.container {
+    position: relative;
+    width: 92.3%;
+    height: 231.9px;
+    z-index: 2000;
+    background-color: aqua;
+}

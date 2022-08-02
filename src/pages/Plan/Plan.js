@@ -4,6 +4,8 @@ import Header from '../../components/Home/Header';
 import Maps from '../../components/Plan/Maps';
 import Calendar from '../../components/Plan/Calendar';
 import { MdSearch } from 'react-icons/md'
+import Route from '../../components/Plan/Route';
+import { FaRoute } from 'react-icons/fa'
 
 function Plan() {
 
@@ -45,6 +47,14 @@ function Plan() {
                         지도 API
                         {/* <Maps searchPlace={Place} ></Maps> */}
                     </div>
+                    <div className={style.ment}>
+                        <h1><FaRoute
+                            className={style.routeIcon}
+                        /> 최단 경로 추천</h1>
+                    </div>
+                    <Route></Route>
+                </div>
+                <div>
                 </div>
             </div >
 

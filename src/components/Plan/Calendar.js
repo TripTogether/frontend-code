@@ -9,7 +9,7 @@ import { BiCalendarAlt } from 'react-icons/bi'
 export default function Calendar() {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
-    const [theme, setTheme] = useState(true); //전체공개 비공개 true or false
+    const [publicBtn, setPublicBtn] = useState(false); //전체공개  true or false
     const [num, setNum] = useState(1); // 여행에 참여하는 사람 순서
 
 
@@ -26,10 +26,10 @@ export default function Calendar() {
         </button>
     );
 
-    const onRadioChange = () => {
-        setTheme(!theme);
-        console.log(theme);
+    const onRadioChange = (Btn) => {
+        setPublicBtn(Btn);
     }
+    console.log(publicBtn);
 
     const onNumChange = (e) => {
         setNum(e.target.value);
@@ -40,8 +40,10 @@ export default function Calendar() {
             <form>
                 <h1>공개 설정</h1>
                 <div className={style.radio}>
-                    <input type="radio" name="theme" value="true" checked={theme} onChange={onRadioChange} /> 전체 공개
-                    <input type="radio" name="theme" value="false" checked={theme} onChange={onRadioChange} /> 비공개
+                    <input type="radio" name="theme" id="publicBtn" checked={publicBtn === 'publicBtn'} onChange={() => onRadioChange('publicBtn')} />
+                    <label htmlFor='publicBtn'>전체 공개</label>
+                    <input type="radio" name="theme" id="privateBtn" checked={publicBtn === 'privateBtn'} onChange={() => onRadioChange('privateBtn')} />
+                    <label htmlFor='privateBtn'>비공개</label>
                 </div>
                 <h1>여행 날짜</h1>
                 <h2>출발일</h2>
