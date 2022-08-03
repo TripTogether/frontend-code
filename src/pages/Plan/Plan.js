@@ -1,7 +1,26 @@
+import React, { useState } from 'react'
 import style from './Plan.module.css';
 import Header from '../../components/Home/Header';
+import Maps from '../../components/Plan/Maps';
+import Calendar from '../../components/Plan/Calendar';
+import { MdSearch } from 'react-icons/md'
+import Route from '../../components/Plan/Route';
+import { FaRoute } from 'react-icons/fa'
 
 function Plan() {
+
+    const [InputText, setInputText] = useState('')
+    const [Place, setPlace] = useState('')
+
+    const onChange = (e) => {
+        setInputText(e.target.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setPlace(InputText)
+        setInputText('')
+    }
     return (
         <div>
             <Header className={style.header}></Header>
@@ -16,27 +35,26 @@ function Plan() {
 
                 <div className={style.title}>
                     <input placeholder='제목을 입력해 주세요.' />
-                    <input placeholder='여행지를 검색해보세요.' />
+                    <form className="inputForm" onSubmit={handleSubmit}>
+                        <input placeholder='여행지를 검색해보세요.'
+                            onChange={onChange} value={InputText} />
+                        <MdSearch type="submit" onClick={handleSubmit}>검색 </MdSearch>
+                    </form>
                 </div>
-                <div className={style.date}>
-                    <h1>공개 설정</h1>
-                    <div className={style.radio}>
-                        <input type="radio" name="theme" value="Public" /> 전체 공개
-                        <input type="radio" name="theme" value="Private" /> 비공개
-                    </div>
-
-                    <h1>여행 날짜</h1>
-                    <h2>출발일</h2>
-                    <h2>도착일</h2>
-                    <h1>모집 인원</h1>
-                    <input className={style.count} type="number" />
-                    <h3>명</h3>
-                </div>
+                <Calendar></Calendar>
                 <div className={style.route}>
                     <div className={style.map}>
                         지도 API
+                        {/* <Maps searchPlace={Place} ></Maps> */}
                     </div>
-                    <h1>dsfdsf</h1>
+                    <div className={style.ment}>
+                        <h1><FaRoute
+                            className={style.routeIcon}
+                        /> 최단 경로 추천</h1>
+                    </div>
+                    <Route></Route>
+                </div>
+                <div>
                 </div>
             </div >
 
