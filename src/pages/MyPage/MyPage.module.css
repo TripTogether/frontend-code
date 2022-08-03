@@ -7,15 +7,43 @@
     background: rgba(182, 185, 200, 0.24);
 }
 
-.rectangle1 {
+.rectangle {
     position: relative;
-    width: 300px;
+    width: 700px;
 
     margin: auto;
-    top: 300px;
+    top: 150px;
     margin-bottom: 20px;
-    padding: 50px;
+    padding: 70px;
     border-width: 10px;
 
     background: #FFFFFF;
+}
+
+.profile {
+    background-image: url(../../../public/img/profile.png) center/cover;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+.airplane {
+    background-image: url(../../../public/img/airplane.png) center/cover;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+
+.post {
+    background-image: url(../../../public/img/post.png) center/cover;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+
+.heart {
+    background-image: url(../../../public/img/heart.png) center/cover;
+    height: 50px;
+    width: 50px;
+    margin: auto;
 }
