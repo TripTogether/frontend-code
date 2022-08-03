@@ -100,6 +100,27 @@ body {
 
 }
 
+.list h1 {
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 4px;
+
+width: 68px;
+height: 33px;
+z-index:100000;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
 /* 
 .menu {
     position: relative;

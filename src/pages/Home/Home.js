@@ -41,8 +41,15 @@ function Home() {
                             다녀온 여행의 후기를 기록해요
                         </h2>
                     </div>
-                </Link >
+                </Link>
             </div >
+            <Link to='/list'>
+                    <div className={style.list}>
+                        <h1>
+                            리스트
+                        </h1>
+                    </div>
+                </Link >
             <div>
                 <TripData></TripData>
             </div>
