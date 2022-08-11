@@ -11,7 +11,7 @@ function Route() {
                 <p>출발지</p>
             </div>
             <div className={style.destination}>
-                <p>도착지</p>
+                <p>도착지 </p>
             </div>
         </div>
     )
