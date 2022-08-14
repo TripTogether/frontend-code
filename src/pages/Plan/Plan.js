@@ -45,7 +45,7 @@ function Plan() {
                 <div className={style.route}>
                     <div className={style.map}>
                         지도 API
-                        {/* <Maps searchPlace={Place} ></Maps> */}
+                        <Maps searchPlace={Place} ></Maps>
                     </div>
                     <div className={style.ment}>
                         <h1>
