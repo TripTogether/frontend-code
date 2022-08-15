@@ -4,12 +4,15 @@ import Header from '../../components/Home/Header';
 import MiddleHeader from '../../components/List/MiddleHeader';
 import style from './List.module.css';
 import { TripData } from '../../components/Home/TripData';
+import ListBoard from "../../components/List/ListBoard";
 
 function List() {
     return (
     <div className={style.layout}>
-       <Header className={style.header}></Header>
-       <MiddleHeader className={style.middleheader}></MiddleHeader>
+       <Header></Header>
+       <div className={style.line}></div>
+       <MiddleHeader></MiddleHeader>
+       <ListBoard></ListBoard>
     </div>
     );
 }

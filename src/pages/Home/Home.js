@@ -44,11 +44,13 @@ function Home() {
                 </Link>
             </div >
             <Link to='/list'>
-                    <div className={style.list}>
-                        <h1>
-                            리스트
-                        </h1>
-                    </div>
+            <div className={style.arrowright1}>
+    
+                        <button>
+                            <h1>All</h1> 
+                            <img className={style.arrowright}src="img/arrowright.png" alt="arrowright"/>
+                        </button>
+            </div>
                 </Link >
             <div>
                 <TripData></TripData>
