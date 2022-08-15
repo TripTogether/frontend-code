@@ -20,6 +20,20 @@
     background: #FFFFFF;
 }
 
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
 .profile {
     background-image: url(../../../public/img/profile.png) center/cover;
     height: 100px;
@@ -31,13 +45,15 @@
     background-image: url(../../../public/img/airplane.png) center/cover;
     height: 50px;
     width: 50px;
-    margin: auto;
+    background-size: contain;
+    
 }
 
 .post {
     background-image: url(../../../public/img/post.png) center/cover;
     height: 50px;
     width: 50px;
+    background-size: contain;
     margin: auto;
 }
 
@@ -45,5 +61,62 @@
     background-image: url(../../../public/img/heart.png) center/cover;
     height: 50px;
     width: 50px;
+    background-size: contain;
     margin: auto;
 }
+
+.css-progressbar {
+    width: 80%;
+    animation: progressbar 2s ease-out;
+}
+
+@keyframes progressbar { 
+    0%  { 
+      width: 0%;
+    } 
+    100% { 
+      width: 80%;
+    }  
+  }
+
+.flexitem {
+    flex-direction: row;
+    margin: auto;
+}
+
+.Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalBody {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  }
+
+  #modalCloseBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: transparent;
+    font-size: 20px;
+  }
+   
+  #modalCloseBtn:hover {
+    cursor: pointer;
+  }
