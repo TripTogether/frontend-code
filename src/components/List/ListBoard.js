@@ -22,7 +22,6 @@ class ListBoard extends Component {
   
     _getListData = async function() { 
       const {limit,page}=this.state;
-
       //테이블 데이터 전체 수
       const total_cnt = await axios('/get/board_cnt');
       console.log(total_cnt.data.cnt)

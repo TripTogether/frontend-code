@@ -44,13 +44,13 @@ function Home() {
                 </Link>
             </div >
             <Link to='/list'>
-            <div className={style.arrowright1}>
-    
                         <button>
+                        <div className={style.arrowright1}>
                             <h1>All</h1> 
                             <img className={style.arrowright}src="img/arrowright.png" alt="arrowright"/>
+                            </div>
                         </button>
-            </div>
+            
                 </Link >
             <div>
                 <TripData></TripData>
