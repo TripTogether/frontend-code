@@ -100,25 +100,71 @@ body {
 
 }
 
-.list h1 {
+.arrowright1 h1{
+    width: 32px;
+    height: 33px;
+    
+    /* Body Extra Large */ 
+    
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+    
+    text-align: right;
+    
+    /* Grey / 300 */
+    
+    color: #A1B0CC;
+
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;} 
+
+.arrowright1 .arrowright{
+    
+    width: 32px;
+    height: 32px;
+    
+    border-radius: 4px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    
+
+}
+.arrowright1 button {
+/* Auto layout */
 /* Auto layout */
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
 
-width: 68px;
-height: 33px;
-z-index:100000;
+
+
+    width: 68px;
+    height: 33px;
+
+
+
 
 /* Inside auto layout */
 
-flex: none;
-order: 1;
-flex-grow: 0;
-
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 /* 
