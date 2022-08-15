@@ -1,19 +1,14 @@
-import style from '../../pages/Plan/Plan.module.css';
-import { GiAirplaneDeparture } from 'react-icons/gi'
-function MiddleHeader({onClick,onChange}) {
+import style from '../../pages/List/List.module.css';
+import { Link } from "react-router-dom";
+import SearchBar from './SearchBar';
+function MiddleHeader() {
     return (
-    <div className={style.middleheader}>
-            <div className="input-group">
-        <input
-          type="search"
-          className="form-control rounded"
-          placeholder="영화 이름 입력 "
-          onChange={onChange}
-        />
-        <button type="button" id="search_btn" onClick={onClick}>
-        </button>
-            </div>
-    </div>
+        <div className={style.middleheader}>
+          <SearchBar></SearchBar>
+          <Link to='/plan'>
+          <button>글쓰기</button>
+          </Link>
+        </div>
     )
 }
 
