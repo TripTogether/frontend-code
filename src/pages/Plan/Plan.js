@@ -52,9 +52,8 @@ function Plan() {
     // }
     let [route, setRoute] = useState([])
 
+    const SearchRoute = ({ date }, props) => {
 
-    console.log(route)
-    const Date = ({ date }) => {
         const [InputText2, setInputText2] = useState('')
 
         const onChange2 = (e) => {
@@ -71,6 +70,22 @@ function Plan() {
                 setRoute(new_arr);
             }
         }
+        return (
+            <form className="inputForm" onSubmit={handleSubmit2}>
+                <input placeholder='여행지를 검색해보세요.'
+                    value={props.value}
+                    onChange={(e) => props.onValueChange(e.target.value)}
+                    id="input-text2" type='text' />
+                <MdSearch type="submit" onClick={handleSubmit2}>검색 </MdSearch>
+            </form>
+        )
+    }
+
+    console.log(route)
+    const Date = ({ date }) => {
+
+        const [value, setValue] = useState('')
+
 
 
         const deleteRoute2 = (e) => {
@@ -86,11 +101,7 @@ function Plan() {
                 <div className={style.date}>
                     <p>{date}일차</p>
                     <RiDeleteBin5Fill onClick={deleteRoute2}></RiDeleteBin5Fill>
-                    <form className="inputForm" onSubmit={handleSubmit2}>
-                        <input placeholder='여행지를 검색해보세요.'
-                            onChange={onChange2} value={InputText2} id="input-text2" type='text' />
-                        <MdSearch type="submit" onClick={handleSubmit2}>검색 </MdSearch>
-                    </form>
+                    <SearchRoute value={value} onValueChange={setValue} date={date}></SearchRoute>
                 </div>
                 <div className={style.dateRoute}>
                     <div >{route.map((item, i) => (
