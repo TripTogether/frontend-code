@@ -1,5 +1,4 @@
-{ <<
-    << << < HEAD
+{
         "name": "trip_together",
         "version": "0.1.0",
         "private": true,
@@ -44,8 +43,8 @@
                 "last 1 firefox version",
                 "last 1 safari version"
             ]
-        } ===
-        === =
+        },
+        
         "name": "trip_together",
         "version": "0.1.0",
         "private": true,
@@ -91,6 +90,5 @@
                 "last 1 firefox version",
                 "last 1 safari version"
             ]
-        } >>>
-        >>> > fe588796215880d68b0c0d34affc4ac99ff97c66
+        } 
 }

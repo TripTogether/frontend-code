@@ -1,10 +1,18 @@
 import style from './MyPage.module.css';
 import Header from '../../components/Home/Header';
-import React from 'react';
+import { React, useState } from 'react';
+import styled from 'styled-components';
 import Modal from 'react-modal';
-
+import ModalMain from '../../components/MyPage/ModalMain';
+import { TripData } from '../../components/Home/TripData';
 
 function MyPage() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openModalHandler = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <div className={style.background}>
             <Header></Header>
@@ -14,13 +22,13 @@ function MyPage() {
                 </div>
 
                 <div className = {style.box}>
-                    <p>이름</p>
+                    <p><strong> 이름 </strong></p>
                 </div>
 
                 <div className = {style.box}>
-                    <progress value="22" max="100"></progress>
+                    <progress value="32" max="100"></progress>
                 </div>
-
+                <br></br>
                 <div className = {style.box2}>
                     <div className = {style.flexitem}> <img className={style.airplane} src="img/airplane.png" alt="airplane" /> <p>함께한 여행 <strong>n건</strong></p> </div>
                     <div className = {style.flexitem}> <img className={style.post} src="img/post.png" alt="post" /> <p>작성한 게시글 <strong>n건</strong></p></div>
@@ -32,12 +40,12 @@ function MyPage() {
 
 
             <div className={style.rectangle}>
-                <p>여행 일정</p>
+                <p><strong>여행 일정</strong></p>
+                <TripData></TripData>
             </div>
             <div className={style.rectangle}>
-                <p>후기 남기기</p>
-                <button id="myBtn">다녀온 여행지</button>
-                
+                <p><strong>다녀온 여행지</strong></p>
+                <ModalMain></ModalMain>
             </div>
         </div>
     )
