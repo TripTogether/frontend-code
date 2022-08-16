@@ -48,11 +48,8 @@ function MyPage() {
             </div>
             <div className={style.rectangle}>
                 <p><strong>다녀온 여행지</strong></p>
-<<<<<<< HEAD
-                <ListBoard></ListBoard>
-=======
                 <ListBoardtwo></ListBoardtwo>
->>>>>>> d7b2c1ab0e3993dcc1a03f830186639e2ee8e311
+
                 <ModalMain></ModalMain>
             </div>
         </div>
