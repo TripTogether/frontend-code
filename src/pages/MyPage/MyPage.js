@@ -22,11 +22,11 @@ function MyPage() {
                 </div>
 
                 <div className = {style.box}>
-                    <p><strong>이름</strong></p>
+                    <p><strong> 이름 </strong></p>
                 </div>
 
                 <div className = {style.box}>
-                    <progress value="22" max="100"></progress>
+                    <progress value="32" max="100"></progress>
                 </div>
                 <br></br>
                 <div className = {style.box2}>
