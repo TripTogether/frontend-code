@@ -19,7 +19,7 @@ export default function Calendar() {
 
     // date.setDate(endDate.getDate() - startDate.getDate())
 
-    console.log(dday)
+    // console.log(dday)
     const DateSelect = ({ value }) => (
         <button className="example-custom-input" >
             {value}
@@ -29,7 +29,7 @@ export default function Calendar() {
     const onRadioChange = (Btn) => {
         setPublicBtn(Btn);
     }
-    console.log(publicBtn);
+    // console.log(publicBtn);
 
     const onNumChange = (e) => {
         setNum(e.target.value);

@@ -22,7 +22,6 @@ class ListBoard extends Component {
   
     _getListData = async function() { 
       const {limit,page}=this.state;
-
       //테이블 데이터 전체 수
       const total_cnt = await axios('/get/board_cnt');
       console.log(total_cnt.data.cnt)
@@ -63,42 +62,54 @@ class ListBoard extends Component {
 
   
     render() {
-        const ListBoard=this.state.data
+        const ListBoard=this.state.data  //수정 전 ListBoard 
         const { all_page, page } = this.state;
 
-        return (
+
+       return (
           <div>
-            <div className={style.listboard}>
-            <h1>제목</h1>
-    <h2>내용</h2>
-    <img className={style.people} src="img/people.png" alt="people" /><h3>인원수</h3>
-    <img className={style.smallheart} src="img/smallheart.png" alt="smallheart" /><h4>좋아요</h4>
-    <img className={style.chatbubble} src="img/chatbubble.png" alt="chatbubble" /><h5>댓글</h5>
-    <img className={style.calendar} src="img/calendar.png" alt="calendar" /><h6>날짜</h6>
+
+     {ListBoard ? data.map( (data,i) => {
+            return(
+    <div className={style.listboard}>
+            <h1>{data.title}</h1>
+    <h2>{data.content}</h2>
+    <img className={style.people} src="img/people.png" alt="people" /><h3>{data.number}</h3>
+    <img className={style.smallheart} src="img/smallheart.png" alt="smallheart" /><h4>{data.heart}</h4>
+    <img className={style.chatbubble} src="img/chatbubble.png" alt="chatbubble" /><h5>{data.chat}</h5>
+    <img className={style.calendar} src="img/calendar.png" alt="calendar" /><h6>{data.date}</h6>
      </div>
-               <div className='paging_div'>
-               <div> </div>
-               <div>
-                 <ul>
-                   {all_page ? all_page.map( (el, key) => {
-                     return(
-                       el === page ? <li key={key} className='page_num'> <b> {el} </b> </li>
-                                   : <li key={key} className='page_num' onClick={() => this._changePage(el)}> {el} </li>
-                     )
-                   })
-                   
-                   : null}
-                 </ul>
-               </div>
-               <div> </div>
-             </div>
+            )
+          })
+            : null }
+
             </div>
-        );
+
+       );
+
 
         
       }
     }
     
-    
+    export default ListBoard;
 
-export default ListBoard;
+    const data=[
+      {
+      title:"속초 1박2일",
+      content:"속초에서 놀고먹는 브이로그",
+      number:"7명",
+      heart:"120",
+      chat:"30",
+      date:"2020.05.27 ~ 2020.05.28"
+    },
+    {
+      title:"부산 2박3일",
+      content:"부산에서 놀고먹는 브이로그",
+      number:"6명",
+      heart:"20",
+      chat:"5",
+      date:"2020.05.27 ~ 2020.05.28"
+    }
+    ]
+    
