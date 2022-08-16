@@ -315,3 +315,23 @@
 .refresh {
     margin-right: 2%;
 }
+
+.AddButton {
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    width: 21px;
+    height: 21px;
+}
+
+.Component {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: darkblue;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+}
