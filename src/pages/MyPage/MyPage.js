@@ -4,6 +4,7 @@ import { React, useState } from 'react';
 import styled from 'styled-components';
 import Modal from 'react-modal';
 import ModalMain from '../../components/MyPage/ModalMain';
+import ListBoard from '../../components/List/ListBoard';
 import { TripData } from '../../components/Home/TripData';
 
 function MyPage() {
@@ -26,7 +27,7 @@ function MyPage() {
                 </div>
 
                 <div className = {style.box}>
-                    <progress value="32" max="100"></progress>
+                    <progress value="22" max="100"></progress>
                 </div>
                 <br></br>
                 <div className = {style.box2}>
@@ -45,6 +46,7 @@ function MyPage() {
             </div>
             <div className={style.rectangle}>
                 <p><strong>다녀온 여행지</strong></p>
+                <ListBoard></ListBoard>
                 <ModalMain></ModalMain>
             </div>
         </div>
