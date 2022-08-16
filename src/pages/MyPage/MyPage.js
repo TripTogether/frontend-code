@@ -6,6 +6,8 @@ import Modal from 'react-modal';
 import ModalMain from '../../components/MyPage/ModalMain';
 import ListBoard from '../../components/List/ListBoard';
 import { TripData } from '../../components/Home/TripData';
+import ListBoard from '../../components/List/ListBoard';
+import ListBoardtwo from '../../components/MyPage/ListBoardtwo';
 
 function MyPage() {
     const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +48,11 @@ function MyPage() {
             </div>
             <div className={style.rectangle}>
                 <p><strong>다녀온 여행지</strong></p>
+<<<<<<< HEAD
                 <ListBoard></ListBoard>
+=======
+                <ListBoardtwo></ListBoardtwo>
+>>>>>>> d7b2c1ab0e3993dcc1a03f830186639e2ee8e311
                 <ModalMain></ModalMain>
             </div>
         </div>
