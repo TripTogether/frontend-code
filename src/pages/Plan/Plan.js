@@ -63,7 +63,7 @@ function Plan() {
             e.preventDefault()
             setPlace(InputText2)
             setInputText2('')
-            let input_text = document.querySelector('#input-text2');
+            let input_text = document.getElementsByName('2')[0];
             if (input_text.value !== '') {
                 let new_arr = [...route];
                 new_arr.push(input_text.value);
@@ -74,9 +74,9 @@ function Plan() {
             <form className="inputForm" onSubmit={handleSubmit2}>
                 <input placeholder='여행지를 검색해보세요.'
                     value={props.value}
-                    onChange={(e) => props.onValueChange(e.target.value)}
-                    id="input-text2" type='text' />
-                <MdSearch type="submit" onClick={handleSubmit2}>검색 </MdSearch>
+                    onChange={onChange2}
+                    id="input" type='text' name={date} />
+                <MdSearch id={date} name={date} type="submit" onClick={handleSubmit2}>검색 </MdSearch>
             </form>
         )
     }
