@@ -84,6 +84,7 @@ body {
     background: #ffff;
     justify-content: space-around;
     border: 0;
+    cursor: pointer;
 }
 
 .nav .btn1 {
@@ -288,34 +289,33 @@ body {
 }
 
 .menu .plan {
-    margin: 100px 0px;
     display: flex;
     position: relative;
-    margin-left: 30px;
     width: 410px;
     height: 410px;
     border-radius: 50%;
     background: url(../../../public/img/mypage.jpg) center/cover;
-    background-color: rgba(86, 86, 86, 0.7);
-    text-decoration: none;
     border: 0;
+    cursor: pointer;
 }
 
 .menu .myPage {
-    margin: 100px 0px;
     display: flex;
     position: relative;
-    margin-right: 30px;
     width: 410px;
     height: 410px;
     border-radius: 50%;
     background: url(../../../public/img/plan.png) center/cover;
     border: 0;
+    cursor: pointer;
 }
 
 .menu a {
     text-decoration: none;
     position: relative;
+    margin-left: 30px;
+    margin: 100px 0px;
+    cursor: default;
 }
 
 .menu h1 {

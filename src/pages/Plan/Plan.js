@@ -89,12 +89,12 @@ function Plan() {
                             <img className={style.routeIcon}
                                 src="img/arrow_sign.png" />
                             최단 경로 추천</h1>
-                        <AiOutlinePlus onClick={addComponent}></AiOutlinePlus>
-                        <AiOutlineMinus onClick={removeComponent}></AiOutlineMinus>
+                        <div className={style.dateComponent}>
+                            <AiOutlinePlus className={style.add} onClick={addComponent}></AiOutlinePlus>
+                            <AiOutlineMinus className={style.add} onClick={removeComponent}></AiOutlineMinus>
+                        </div>
                     </div>
-                    <div >
-                        {components.map((item, i) => (<Date Place={Place} text={item} date={i + 1} setPlace={setPlace} />))}
-                    </div>
+                    {components.map((item, i) => (<Date Place={Place} text={item} date={i + 1} setPlace={setPlace} />))}
                     <form>
                         <div className={style.footer}>
                             <h1>경로 확인</h1>

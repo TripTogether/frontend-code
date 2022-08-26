@@ -40,12 +40,12 @@ function Date({ date, Place, setPlace }) {
             }
         }
         return (
-            <form className="inputForm" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input placeholder='여행지를 검색해보세요.'
                     value={props.value}
                     onChange={onChange}
                     id={date} type='text' name={date} />
-                <MdSearch id={date} name={date} type="submit" value={value}
+                <MdSearch className={style.search} id={date} name={date} type="submit" value={value}
                     onClick={handleSubmit}>검색 </MdSearch>
             </form>
         )
@@ -57,13 +57,13 @@ function Date({ date, Place, setPlace }) {
         <div className={style.container}>
             <div className={style.date}>
                 <p>{date}일차</p>
-                <RiDeleteBin5Fill onClick={deleteRoute2}></RiDeleteBin5Fill>
-                <SearchRoute value={value} onValueChange={setValue} date={date}></SearchRoute>
+                <SearchRoute className={style.inputForm} value={value} onValueChange={setValue} date={date}></SearchRoute>
+                <RiDeleteBin5Fill className={style.delete} onClick={deleteRoute2}></RiDeleteBin5Fill>
             </div>
             <div className={style.dateRoute}>
                 <div >{route.map((item, i) => (
                     <div key={i} className={style.start}>
-                        {item}
+                        <p>{item}</p>
                     </div>
                 ))}
                 </div>
