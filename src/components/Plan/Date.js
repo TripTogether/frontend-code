@@ -52,7 +52,6 @@ function Date({ date, Place, setPlace }) {
     }
 
     console.log(route)
-
     return (
         <div className={style.container}>
             <div className={style.date}>
