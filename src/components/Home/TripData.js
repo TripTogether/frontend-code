@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
-import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { AiFillHeart, } from 'react-icons/ai';
 
 import { Sliders } from "./Sliders";
 

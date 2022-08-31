@@ -8,7 +8,7 @@ function Header() {
                 Trip Together
             </div>
             <nav className={style.nav}>
-                <Link to='/'>
+                <Link to='/Plan'>
                     <button className={style.btn1}>
                         여행일정
                     </button>

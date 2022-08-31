@@ -102,8 +102,6 @@ function Plan() {
                             <button type='submit'>경로 등록</button>
                         </div>
                     </form>
-
-
                 </div>
                 <div>
                 </div>
