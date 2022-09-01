@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
-
-import { AiFillHeart, } from 'react-icons/ai';
+import style from "./TripData.module.css";
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
 import { Sliders } from "./Sliders";
 
@@ -23,6 +23,8 @@ const tripData = [
 ];
 
 export function TripData() {
+  const [heart, setHeart] = useState(false);
+
   return (
     <ModalWrapper>
       <Sliders dots={true} index={0}>
@@ -35,6 +37,12 @@ export function TripData() {
               <p className="ment" key={10 + index}>
                 {data.ment}
               </p>
+              <div className={style.heart}>
+                {heart ?
+                  <AiOutlineHeart key={20 + index} onClick={() => { setHeart(!heart); }}></AiOutlineHeart> :
+                  <AiFillHeart key={20 + index} onClick={() => { setHeart(!heart); }}></AiFillHeart>
+                }
+              </div>
             </>
           );
         })}

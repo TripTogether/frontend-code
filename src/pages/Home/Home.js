@@ -5,7 +5,6 @@ import style from './Home.module.css';
 import { TripData } from '../../components/Home/TripData';
 
 function Home() {
-    const [heart, setHeart] = useState(false);
     return (
         <div className={style.layout}>
             <Header className={style.header}></Header>
