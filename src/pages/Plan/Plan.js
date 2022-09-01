@@ -9,17 +9,12 @@ import { IoRefreshOutline } from 'react-icons/io5';
 import { RiDeleteBin5Fill } from 'react-icons/ri';
 import { addMinutes } from 'date-fns';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import Date from '../../components/Plan/Date';
+
 
 function Plan() {
-
-
-    const [InputText, setInputText] = useState('')
     const [Place, setPlace] = useState('')
     const [components, setComponents] = useState([""]);
-
-    const onChange = (e) => {
-        setInputText(e.target.value)
-    }
 
     const addComponent = () => {
 
@@ -27,6 +22,7 @@ function Plan() {
 
     }
 
+    console.log(Place)
     const removeComponent = () => {
         setComponents(components.slice(0, components.length - 1));
     }
@@ -50,74 +46,18 @@ function Plan() {
     //         setRoute(new_arr);
     //     }
     // }
-    let [route, setRoute] = useState([])
 
-    const SearchRoute = ({ date }, props) => {
 
-        const [InputText2, setInputText2] = useState('')
+    const [InputText, setInputText] = useState('')
 
-        const onChange2 = (e) => {
-            setInputText2(e.target.value)
-        }
-        const handleSubmit2 = (e) => {
-            e.preventDefault()
-            setPlace(InputText2)
-            setInputText2('')
-            let input_text = document.querySelector('#input-text2');
-            if (input_text.value !== '') {
-                let new_arr = [...route];
-                new_arr.push(input_text.value);
-                setRoute(new_arr);
-            }
-        }
-        return (
-            <form className="inputForm" onSubmit={handleSubmit2}>
-                <input placeholder='여행지를 검색해보세요.'
-                    value={props.value}
-                    onChange={(e) => props.onValueChange(e.target.value)}
-                    id="input-text2" type='text' />
-                <MdSearch type="submit" onClick={handleSubmit2}>검색 </MdSearch>
-            </form>
-        )
+    const onChange2 = (e) => {
+        setInputText(e.target.value)
     }
+    const handleSubmit2 = (e) => {
+        e.preventDefault()
+        setPlace(InputText)
 
-    console.log(route)
-    const Date = ({ date }) => {
-
-        const [value, setValue] = useState('')
-
-
-
-        const deleteRoute2 = (e) => {
-            e.preventDefault()
-            if (route.length !== 0) {
-                let new_arr = [...route];
-                new_arr.pop(route.value);
-                setRoute(new_arr);
-            }
-        }
-        return (
-            <div className={style.container}>
-                <div className={style.date}>
-                    <p>{date}일차</p>
-                    <RiDeleteBin5Fill onClick={deleteRoute2}></RiDeleteBin5Fill>
-                    <SearchRoute value={value} onValueChange={setValue} date={date}></SearchRoute>
-                </div>
-                <div className={style.dateRoute}>
-                    <div >{route.map((item, i) => (
-                        <div key={i} className={style.start}>
-                            {item}
-                        </div>
-                    ))}
-                    </div>
-
-                </div>
-            </div >
-        )
     }
-
-
-
     return (
         <div>
             <Header className={style.header}></Header>
@@ -132,29 +72,29 @@ function Plan() {
 
                 <div className={style.title}>
                     <input placeholder='제목을 입력해 주세요.' />
-                    {/* <form className="inputForm" onSubmit={handleSubmit}>
+                    {/* <form className="inputForm" onSubmit={handleSubmit2}>
                         <input placeholder='여행지를 검색해보세요.'
-                            onChange={onChange} value={InputText} id="input-text" type='text' />
-                        <MdSearch type="submit" onClick={handleSubmit}>검색 </MdSearch>
+                            onChange={onChange2} value={InputText} id="input-text" type='text' />
+                        <MdSearch type="submit" onClick={handleSubmit2}>검색 </MdSearch>
                     </form> */}
                 </div>
                 <Calendar></Calendar>
                 <div className={style.route}>
                     <div className={style.map}>
                         지도 API
-                        {/* <Maps searchPlace={Place} ></Maps> */}
+                        <Maps searchPlace={Place} ></Maps>
                     </div>
                     <div className={style.ment}>
                         <h1>
                             <img className={style.routeIcon}
                                 src="img/arrow_sign.png" />
                             최단 경로 추천</h1>
-                        <AiOutlinePlus onClick={addComponent}></AiOutlinePlus>
-                        <AiOutlineMinus onClick={removeComponent}></AiOutlineMinus>
+                        <div className={style.dateComponent}>
+                            <AiOutlinePlus className={style.add} onClick={addComponent}></AiOutlinePlus>
+                            <AiOutlineMinus className={style.add} onClick={removeComponent}></AiOutlineMinus>
+                        </div>
                     </div>
-                    <div >
-                        {components.map((item, i) => (<Date text={item} date={i + 1} label={i + 1} />))}
-                    </div>
+                    {components.map((item, i) => (<Date Place={Place} text={item} date={i + 1} setPlace={setPlace} />))}
                     <form>
                         <div className={style.footer}>
                             <h1>경로 확인</h1>
@@ -162,8 +102,6 @@ function Plan() {
                             <button type='submit'>경로 등록</button>
                         </div>
                     </form>
-
-
                 </div>
                 <div>
                 </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Header from '../../components/Home/Header';
 import style from './Home.module.css';
 import { TripData } from '../../components/Home/TripData';
@@ -22,39 +22,39 @@ function Home() {
             </div>
             <div className={style.menu}>
                 <Link to='/plan'>
-                    <div className={style.plan}>
+                    <button className={style.plan}>
                         <h1>
                             여행일정
                         </h1>
                         <h2>
                             여행의 세부 계획을 세워보세요!
                         </h2>
-                    </div>
+                    </button>
                 </Link>
                 <Link to='/myPage'>
-                    <div className={style.myPage}>
+                    <button className={style.myPage}>
                         <h1>
                             마이페이지
                         </h1>
-
                         <h2>
                             다녀온 여행의 후기를 기록해요
                         </h2>
-                    </div>
+                    </button>
                 </Link>
             </div >
-            <Link to='/list'>
-                        <button>
+            <div className={style.list}>
+                <p className={style.name}>여행 시작!</p>
+                <Link to='/list'>
+                    <button className={style.button}>
                         <div className={style.arrowright1}>
-                            <h1>All</h1> 
-                            <img className={style.arrowright}src="img/arrowright.png" alt="arrowright"/>
-                            </div>
-                        </button>
-            
+                            <h1>All</h1>
+                            <img className={style.arrowright} src="img/arrowright.png" alt="arrowright" />
+                        </div>
+                    </button>
                 </Link >
-            <div>
-                <TripData></TripData>
             </div>
+            <TripData></TripData>
+
         </div >
     );
 }

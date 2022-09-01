@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     width: 100%;
     overflow-y: scroll;
-
 }
 
 .header {
@@ -24,16 +23,89 @@ body {
     padding: 8px 24px;
     gap: 10px;
     flex: 0 1 728px;
-
     position: fixed;
     height: 96px;
     /* True White */
-
     background: #ffff;
     top: 0;
     box-sizing: border-box;
     width: 100%;
     z-index: 1000;
+}
+
+.logo {
+    width: 190px;
+    height: 74px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35px;
+    /* or 109% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #2BB6F1;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 36px;
+    gap: 16px;
+    width: 421px;
+    height: 80px;
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+}
+
+.nav button {
+    gap: 10px;
+    width: 99px;
+    height: 42px;
+    /* Inside auto layout */
+    flex: none;
+    /* Body Default */
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    /* Grey / 400 */
+    color: #7C8DB0;
+    background: #ffff;
+    justify-content: space-around;
+    border: 0;
+    cursor: pointer;
+}
+
+.nav .btn1 {
+    color: #2BB6F1;
+}
+
+.nav a {
+    text-decoration: none;
+    position: relative;
+}
+
+.nav .btn {
+    height: 48px;
+    background: #2BB6F1;
+    border-radius: 4px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FAFAFA;
 }
 
 .main {
@@ -46,142 +118,135 @@ body {
     background: url(../../../public/img/coud.jpg) center/cover;
 }
 
-
 .main h1 {
     position: relative;
     height: 69px;
-
     font-family: 'Gothic A1';
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
     line-height: 80px;
-
     color: #F5F5F5;
     text-align: right;
     margin-right: 5%;
-
 }
-
 
 .main h2 {
     position: relative;
     height: 69px;
-
     font-family: 'Gothic A1';
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
     line-height: 80px;
-
     color: #F5F5F5;
     text-align: right;
     margin-right: 5%;
-
     height: 100px;
-
-
 }
 
 .main h3 {
     position: relative;
     height: 100px;
     top: 0;
-
     font-family: 'Gothic A1';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
-
     color: #F5F5F5;
     text-align: right;
     margin-right: 5%;
-
 }
 
-.layout button{
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 826px;
+    width: 100%;
+    height: 33px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.name {
+    width: 121px;
+    height: 33px;
+    /* Header H3 */
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+    /* Grey / 600 */
+    color: #6E7491;
+    margin-left: 5%;
+}
+
+.button {
     position: absolute;
-width: 72px;
-height: 35px;
-left:90%;
-top: 1180px;
-
-border:0;
-background: none;
+    width: 72px;
+    height: 35px;
+    left: 90%;
+    border: 0;
+    background: none;
 }
-.arrowright1 h1{
+
+.arrowright1 h1 {
     width: 32px;
     height: 33px;
-    
-    /* Body Extra Large */ 
-    
+    /* Body Extra Large */
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
     /* identical to box height */
-    
     text-align: right;
-    
     /* Grey / 300 */
-    
     color: #A1B0CC;
-
-    
     /* Inside auto layout */
-    
     flex: none;
     order: 0;
-    flex-grow: 0;} 
+    flex-grow: 0;
+}
 
-.arrowright1 .arrowright{
-    
+.arrowright1 .arrowright {
     width: 32px;
     height: 32px;
-
     border-radius: 4px;
-    
     /* Inside auto layout */
-    
     flex: none;
     order: 1;
     flex-grow: 0;
-   
-    
-
 }
+
 .arrowright1 {
-
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 4px;
-
-
-
-width: 68px;
-height: 33px;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
-
-background: none;
-
-/* Inside auto layout */
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    width: 68px;
+    height: 33px;
+    /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
-
-
+    background: none;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
+
 
 /* 
 .menu {
@@ -254,41 +319,33 @@ background: none;
 }
 
 .menu .plan {
-    margin: 100px 0px;
     display: flex;
     position: relative;
-
-    margin-left: 30px;
     width: 410px;
     height: 410px;
     border-radius: 50%;
-
     background: url(../../../public/img/mypage.jpg) center/cover;
-    background-color: rgba(86, 86, 86, 0.7);
-    text-decoration: none;
-
-
-
+    border: 0;
+    cursor: pointer;
 }
 
 .menu .myPage {
-    margin: 100px 0px;
-
     display: flex;
     position: relative;
-    margin-right: 30px;
-
     width: 410px;
     height: 410px;
     border-radius: 50%;
-
     background: url(../../../public/img/plan.png) center/cover;
+    border: 0;
+    cursor: pointer;
 }
 
 .menu a {
     text-decoration: none;
     position: relative;
-
+    margin-left: 30px;
+    margin: 100px 0px;
+    cursor: default;
 }
 
 .menu h1 {
@@ -298,15 +355,12 @@ background: none;
     left: 87px;
     width: 100%;
     height: 20px;
-
     font-family: 'Gothic A1';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 50px;
-
     color: #F5F5F5;
-
 }
 
 .menu h2 {
@@ -321,6 +375,5 @@ background: none;
     font-weight: 700;
     font-size: 18px;
     line-height: 50px;
-
     color: #F5F5F5;
 }

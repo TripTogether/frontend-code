@@ -1,0 +1,16 @@
+.heart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 24px;
+    gap: 4px;
+    width: 410.67px;
+    height: 51px;
+    /* True White */
+    background: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
