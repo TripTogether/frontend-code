@@ -47,7 +47,6 @@ function MyPage() {
             </div>
             <div className={style.rectangle}>
                 <p><strong>다녀온 여행지</strong></p>
-
                 <ListBoardtwo></ListBoardtwo>
             </div>
         </div>

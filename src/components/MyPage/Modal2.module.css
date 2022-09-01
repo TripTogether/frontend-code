@@ -37,8 +37,8 @@
   
   .modal {
     /*모달창*/
-    width: 500px;
-    height: 200px;
+    width: 550px;
+    height: 400px;
     background: white;
     color: white;
     z-index: 10000;
@@ -57,7 +57,7 @@
   }
   
   .heading {
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     color: #2c3e50;
     font-weight: 500;
