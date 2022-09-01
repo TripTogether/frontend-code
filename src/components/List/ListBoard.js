@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import style from '../../components/List/ListBoard.module.css';
-
 import axios from 'axios';
 
 class ListBoard extends Component {
@@ -72,12 +71,14 @@ class ListBoard extends Component {
      {ListBoard ? data.map( (data,i) => {
             return(
     <div className={style.listboard}>
+    
             <h1>{data.title}</h1>
     <h2>{data.content}</h2>
     <img className={style.people} src="img/people.png" alt="people" /><h3>{data.number}</h3>
     <img className={style.smallheart} src="img/smallheart.png" alt="smallheart" /><h4>{data.heart}</h4>
     <img className={style.chatbubble} src="img/chatbubble.png" alt="chatbubble" /><h5>{data.chat}</h5>
     <img className={style.calendar} src="img/calendar.png" alt="calendar" /><h6>{data.date}</h6>
+    
      </div>
             )
           })
@@ -97,7 +98,7 @@ class ListBoard extends Component {
     const data=[
       {
       title:"속초 1박2일",
-      content:"속초에서 놀고먹는 브이로그",
+      content:"강릉 여행",
       number:"7명",
       heart:"120",
       chat:"30",
@@ -105,7 +106,7 @@ class ListBoard extends Component {
     },
     {
       title:"부산 2박3일",
-      content:"부산에서 놀고먹는 브이로그",
+      content:"부산 여행",
       number:"6명",
       heart:"20",
       chat:"5",

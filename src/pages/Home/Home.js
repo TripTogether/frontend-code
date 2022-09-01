@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React, { Component, useState } from 'react';
 import Header from '../../components/Home/Header';
 import style from './Home.module.css';
+import Login from '../../components/Home/Login';
 import { TripData } from '../../components/Home/TripData';
 
 function Home() {
@@ -56,6 +57,7 @@ function Home() {
             <TripData></TripData>
 
         </div >
+        
     );
 }
 
