@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import style from '../../components/List/ListBoard.module.css';
+import style from '../../components/MyPage/ListBoardtwo.module.css';
 
 import axios from 'axios';
 import ModalMain from './ModalMain';
@@ -98,7 +98,7 @@ class ListBoardtwo extends Component {
     const data=[
       {
       title:"강릉 1박2일",
-      content:"속초에서 놀고먹는 브이로그",
+      content:"강릉 여행",
       number:"7명",
       heart:"120",
       chat:"30",
@@ -106,7 +106,7 @@ class ListBoardtwo extends Component {
     },
     {
       title:"부산 2박3일",
-      content:"부산에서 놀고먹는 브이로그",
+      content:"부산 여행",
       number:"6명",
       heart:"20",
       chat:"5",
